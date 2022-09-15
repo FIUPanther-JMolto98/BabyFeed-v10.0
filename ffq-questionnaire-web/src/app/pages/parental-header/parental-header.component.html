@@ -1,8 +1,8 @@
 <title>{{ "PARENTPORTAL.TITLE" | translate }}</title>
 <div class="header">
-  <h2 matDialogTitle>{{ "PARENTPORTAL.TITLE" | translate }}</h2>
+  <h2 matDialogTitle><a routerLink="/parent/home">{{ "PARENTPORTAL.TITLE" | translate }}</a></h2>
   <div align="center">
-    <i> <img src="assets/images/logo.png" alt="" height="80" width="80" /> </i>
+    <i> <img class="header-logo" src="assets/images/logo.png" alt="" height="80" width="80" routerLink="/parent/home"/> </i>
   </div>
   <div class="login-button">
     <button mat-raised-button (click)="logout()" translate>
@@ -12,7 +12,7 @@
   </div>
 
   <div align="center"><i></i></div>
-  <a class="tab-link" routerLink="/parent/home" routerLinkActive="active"
+  <a class="tab-link" routerLink="/parent/tracker" routerLinkActive="active"
     >{{ "Tracking" | translate }}
     <img
       class="center"

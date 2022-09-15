@@ -111,6 +111,7 @@ import { ServingSizePicturesComponent } from "./components/serving-size-pictures
 import { InterpretationGrowthChartsDialogComponent } from "./components/interpretation-growth-charts-dialog/interpretation-growth-charts-dialog.component";
 import { GrowthChartsHelpComponent } from "./components/growth-charts-help/growth-charts-help.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { HomePageComponent } from "./pages/home-page/home-page.component";
 
 @NgModule({
   declarations: [
@@ -183,6 +184,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     GrowthChartsPageComponent,
     InterpretationGrowthChartsDialogComponent,
     GrowthChartsHelpComponent,
+    HomePageComponent
   ],
   imports: [
     MatProgressSpinnerModule,

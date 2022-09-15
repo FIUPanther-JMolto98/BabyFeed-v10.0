@@ -40,6 +40,7 @@ import { UpdateResearchInstitutionComponent } from './pages/modify-research-inst
 import { UpdateResearcherComponent } from './pages/modify-researcher/modify-researcher.component';
 import { ClinicQuestionnaireComponent } from './pages/clinic-questionnaire/clinic-questionnaire.component';
 import { GrowthChartsPageComponent } from './pages/growth-charts-page/growth-charts-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 const routes: Routes = [
   {
     path: '',
@@ -216,6 +217,11 @@ const routes: Routes = [
   },
   {
     path: 'parent/home',
+    component: HomePageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'parent/tracker',
     component: TrackerPageComponent,
     canActivate: [AuthGuard]
   },

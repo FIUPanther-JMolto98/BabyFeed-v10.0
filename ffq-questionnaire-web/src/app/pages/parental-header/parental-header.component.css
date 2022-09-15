@@ -5,6 +5,7 @@ h2 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .links{
@@ -111,6 +112,10 @@ body, html {
 .center {
   display: block;
   margin:auto;  
+}
+
+.header-logo {
+  cursor: pointer;
 }
 
 
