@@ -1,0 +1,21 @@
+.home-component-container {
+    padding-top: 205px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    text-align: center; */
+}
+
+.homeitem-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: gray;
+}
+
+.homeitem-container h1 {
+    /* margin: 0; */
+}
