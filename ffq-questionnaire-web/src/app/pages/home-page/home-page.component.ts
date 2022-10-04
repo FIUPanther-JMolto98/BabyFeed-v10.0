@@ -18,7 +18,7 @@ import { User } from 'src/app/services/authentication/temp-user';
 @Component({
     selector: 'app-home-page',
     templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.css']
+    styleUrls: ['./home-page.component.css', '../parental-header/parental-header.component.css']
   })
 
 export class HomePageComponent {
@@ -29,5 +29,10 @@ export class HomePageComponent {
     constructor(router: Router, private authenticationService: AuthenticationService, private translate: TranslateService) {
       this.router = router;
       this.authenticationService = this.authenticationService;
+    }
+
+    logout() {
+        this.authenticationService.logout();
+        this.router.navigate(['/login']);
     }
 }
