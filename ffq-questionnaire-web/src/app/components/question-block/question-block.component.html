@@ -6,28 +6,28 @@
         style="
           text-align: right;
           padding-bottom: 1%;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: Roboto;
         "
         class="qb-row-item"
         [hidden]="foodItem.disabled"
-        ><u>
+        ><b>
           {{
-            "Click on the x button if my baby does not eat/drink" | translate
-          }}.</u
-        >
+            "Click on the 'x' button if my baby does not eat/drink" | translate
+          }}.
+        </b>
       </mat-label>
       <mat-label
         style="
           text-align: right;
           padding-bottom: 1%;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: Roboto;
         "
         class="qb-row-item"
         [hidden]="!foodItem.disabled"
-        ><u>
-          {{ "Click on the + button if my baby does eat/drink" | translate }}:
-          {{ foodItem.name | translate }}.</u
-        >
+        ><b>
+          {{ "Click on the '+' button if my baby does eat/drink" | translate }}:
+          {{ foodItem.name | translate }}.
+        </b>
       </mat-label>
     </mat-card-header>
 
