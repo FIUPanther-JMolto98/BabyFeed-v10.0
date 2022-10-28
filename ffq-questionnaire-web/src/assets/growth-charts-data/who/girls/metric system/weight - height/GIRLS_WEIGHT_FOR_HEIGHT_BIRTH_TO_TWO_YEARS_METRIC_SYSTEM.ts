@@ -1229,7 +1229,7 @@ export var GIRLS_WEIGHT_FOR_HEIGHT_BIRTH_TO_TWO_YEARS_METRIC_SYSTEM = [
     ],
   },
   {
-    name: "95",
+    name: "95th",
     series: [
       { name: "45", value: "2.9" },
       { name: "45.5", value: "3" },

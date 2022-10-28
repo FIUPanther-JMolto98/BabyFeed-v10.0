@@ -1229,7 +1229,7 @@ export var GIRLS_WEIGHT_FOR_HEIGHT_BIRTH_TO_TWO_YEARS_MIXED_SYSTEM_KG_VS_IN = [
     ],
   },
   {
-    name: "95",
+    name: "95th",
     series: [
       { name: "17.7", value: "2.9" },
       { name: "17.9", value: "3" },

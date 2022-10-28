@@ -266,7 +266,7 @@ export var BOYS_WEIGHT_FOR_AGE_BIRTH_TO_TWO_YEARS_METRIC_SYSTEM = [
       ]
     },
     {
-      name:"95","series":[
+      name:"95th","series":[
         {"name":"0","value": "4.2"},
         {"name":"1","value": "5.5"},
         {"name":"2","value": "6.8"},

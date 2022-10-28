@@ -279,7 +279,7 @@ export var BOYS_WEIGHT_FOR_AGE_BIRTH_TO_TWO_YEARS_US_CUSTOMARY_SYSTEM = [
     ],
   },
   {
-    name: "95",
+    name: "95th",
     series: [
       { name: "0", value: "9.3" },
       { name: "1", value: "12.1" },

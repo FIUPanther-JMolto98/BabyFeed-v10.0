@@ -279,7 +279,7 @@ export var GIRLS_WEIGHT_FOR_AGE_BIRTH_TO_TWO_YEARS_US_CUSTOMARY_SYSTEM = [
     ],
   },
   {
-    name: "95",
+    name: "95th",
     series: [
       { name: "0", value: "8.8" },
       { name: "1", value: "11.5" },

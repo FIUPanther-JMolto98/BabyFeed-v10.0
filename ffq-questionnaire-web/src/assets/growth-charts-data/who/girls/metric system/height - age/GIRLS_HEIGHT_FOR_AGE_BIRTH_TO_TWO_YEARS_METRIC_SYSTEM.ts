@@ -275,7 +275,7 @@ export var GIRLS_HEIGHT_FOR_AGE_BIRTH_TO_TWO_YEARS_METRIC_SYSTEM = [
     ],
   },
   {
-    name: "95",
+    name: "95th",
     series: [
       { name: "0", value: "52.2" },
       { name: "1", value: "56.9" },
