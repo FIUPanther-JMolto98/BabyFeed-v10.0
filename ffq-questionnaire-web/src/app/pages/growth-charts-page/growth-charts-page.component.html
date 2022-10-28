@@ -116,7 +116,7 @@
           <p>{{ "Please, provide all the information asked" | translate }}.</p>
 
           <p>
-            {{ "Height units" | translate }}:
+            {{ "Length units" | translate }}:
             <mat-button-toggle-group
               #heightUnitOptionsGroup="matButtonToggleGroup"
               name="heightUnitOptionsControl"
@@ -179,7 +179,7 @@
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label
-                >{{ "Height in" | translate }} ({{
+                >{{ "Length in" | translate }} ({{
                   heightUnitOptions
                 }})</mat-label
               >
@@ -200,7 +200,7 @@
               >
                 <mat-label *ngIf="heightControl.errors.required">
                   {{
-                    "You must enter a height in centimeters" | translate
+                    "You must enter a length in centimeters" | translate
                   }}.</mat-label
                 >
               </ng-container>
@@ -228,7 +228,7 @@
               >
                 <mat-label *ngIf="weightControl.errors.required">
                   {{
-                    "You must enter a height in centimeters" | translate
+                    "You must enter a weight in kilograms" | translate
                   }}.</mat-label
                 >
               </ng-container>
@@ -277,13 +277,13 @@
                 "BMI" | translate
               }}</mat-button-toggle>
               <mat-button-toggle value="Height-Age">{{
-                "Height" | translate
+                "Length" | translate
               }}</mat-button-toggle>
               <mat-button-toggle value="Weight-Age"
                 >{{ "Weight" | translate }}
               </mat-button-toggle>
               <mat-button-toggle value="Weight-Height"
-                >{{ "Weight-Height" | translate }}
+                >{{ "Weight-Length" | translate }}
               </mat-button-toggle>
             </mat-button-toggle-group>
           </form>
