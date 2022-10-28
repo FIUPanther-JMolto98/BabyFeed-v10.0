@@ -582,9 +582,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Chicken or turkey (includes breast, thighs, wings, ground)",
+          title: "Chicken or Turkey",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -593,25 +592,22 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Fish",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "Peanuts, peanut butter and other nuts") {
       data = {
         data: {
-          title: "Peanuts, peanut butter and other nuts",
+          title: "Peanuts, Peanut Butter and Nuts",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "Cake, muffins, donuts, etc.") {
       data = {
         data: {
-          title: "Cake, muffins, donuts, etc.",
+          title: "Baked Sweets",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -622,18 +618,16 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Cookies (sugar cookies, chocolate chips, oats, vanilla, etc.)",
+            "Cookies",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "Honey, jam, syrup, agave") {
       data = {
         data: {
-          title: "Honey, jam, syrup, agave",
+          title: "Honey/Syrup",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
