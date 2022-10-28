@@ -82,16 +82,16 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
         break;
       case "Bread (examples: sandwich bread, dinner roll, bagel, French bread, tortilla...)":
-        /** Missing the image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Bread.jpg";
         break;
       case "Pancake, waffles, French toast, cinnamon rolls, etc.":
-        /** Missing the image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Pancakes.jpg";
         break;
       case "Crackers (examples: soda, Ritz, Cheez-It, Saltines, etc.)":
-        /** Missing the image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Crackers.jpg";
+        break;
+        case "Pizza, turnovers, tacos, other fried foods, etc.":
+        this.imageRef = "../assets/serving-size-images/Pizza.jpg";
         break;
       case "Banana":
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
@@ -133,8 +133,7 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
         break;
       case "Plantains":
-        /** Missing image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Plantains.jpg";
         break;
       case "Other starchy vegetables (yucca, yautia, celery, breadfruit)":
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
@@ -155,12 +154,10 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
         break;
       case "Cake, muffins, donuts, etc.":
-        /** Missing image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Cake.jpg";
         break;
       case "Cookies (sugar cookies, chocolate chips, oats, vanilla, etc.)":
-        /** Missing image */
-        this.imageRef = "../assets/serving-size-images/test-picture.jpg";
+        this.imageRef = "../assets/serving-size-images/Cookies.jpg";
         break;
       case "Honey, jam, syrup, agave":
         this.imageRef = "../assets/serving-size-images/Hot-cereal.jpg";
@@ -204,7 +201,7 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     } else if (
       this.foodItem.name === "Pizza, turnovers, tacos, other fried foods, etc."
     ) {
-      return false;
+      return true;
     } else if (this.foodItem.name === "French Fries") {
       return false;
     } else if (this.foodItem.name === "Egg") {
@@ -238,7 +235,7 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Infant Formula",
           imageUrl: this.imageRef,
-          messages: ["This image represents the Infant formula oz amounts."],
+          messages: ["This image represents the infant formula serving sizes in a bottle (in ounces)."],
         },
       };
     }
@@ -249,18 +246,16 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Baby Cereal added to formula or breastmilk (examples: rice, wheat, etc.)",
+            "Baby Cereal",
           imageUrl: this.imageRef,
-          messages: ["This image represents the baby cereal."],
         },
       };
     }
     if (this.foodItem.name === "Cows milk (white, plain)") {
       data = {
         data: {
-          title: "Cows milk (white, plain)",
+          title: "Cow Milk",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -271,9 +266,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Flavored Milk (chocolate, vanilla or fruit flavored); examples: Nido, frozen beverages, milkshakes, hot chocolate, etc.)",
+            "Flavored Milk",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -284,20 +278,16 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Vitamin Enriched Pediatric Milk Beverages (examples: Pediasure, Pediasure growth, etc.)",
+            "Vitamin Enriched Milk Beverages",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "100% orange juice") {
       data = {
         data: {
-          title: "100% orange juice",
+          title: "100% Orange Juice",
           imageUrl: this.imageRef,
-          messages: [
-            "This image represents the ounces for infant formula in a bottle.",
-          ],
         },
       };
     }
@@ -307,9 +297,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "100% vegetable juice (examples: carrot, tomato, etc.)",
+          title: "100% Vegetable Juice",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -320,9 +309,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Other fruit beverages (examples: Hi-C, Space gang, Sunny D, etc.)",
+            "Other Fruit Beverages",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -332,9 +320,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Sodas (examples: Coca-Cola, Pepsi, 7-Up, Fanta, Malta, etc.)",
+          title: "Sodas",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -344,9 +331,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Kool-Aid, Tang, Iced Tea (examples: Nestea, Lipton, etc.)",
+          title: "Instant Beverages",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -357,9 +343,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Hot cereal (examples: rice cereal, cream of wheat, oatmeal, corn mush, etc.)",
+            "Hot Cereal",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -370,9 +355,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Ready to eat breakfast cereals, sugar sweetened (examples: Corn Pops, Fruity Pebbles, Frosted Flakes, Trix, Lucky Charms, Cocoa Puffs, Froot Loops, etc.)",
+            "Breakfast Cereals",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -383,9 +367,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Ready to eat breakfast cereals, low sugar (examples: Corn flakes, regular Cheerios, Life, Corn or Rice Chex, Grape nuts, etc.)",
+            "Breakfast Cereals",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -394,9 +377,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Rice and Pasta",
           imageUrl: this.imageRef,
-          messages: [
-            "This image represents the ounces for infant formula in a bottle.",
-          ],
         },
       };
     }
@@ -407,11 +387,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Bread (examples: sandwich bread, dinner roll, bagel, French bread, tortilla...)",
+            "Bread",
           imageUrl: this.imageRef,
-          messages: [
-            "This image represents the ounces for infant formula in a bottle.",
-          ],
         },
       };
     }
@@ -421,9 +398,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Pancake, waffles, French toast, cinnamon rolls, etc.",
+          title: "Pancake, Waffles, etc.",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -433,11 +409,19 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Crackers (examples: soda, Ritz, Cheez-It, Saltines, etc.)",
+          title: "Crackers",
           imageUrl: this.imageRef,
-          messages: [
-            "This image represents the ounces for infant formula in a bottle.",
-          ],
+        },
+      };
+    }
+    if (
+      this.foodItem.name ===
+      "Pizza, turnovers, tacos, other fried foods, etc."
+    ) {
+      data = {
+        data: {
+          title: "Pizza, Turnovers, etc.",
+          imageUrl: this.imageRef,
         },
       };
     }
@@ -446,7 +430,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Banana",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -455,7 +438,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Apple",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -464,7 +446,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Pear",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -473,9 +454,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Citrus fruits (examples: orange, mandarin, etc.)",
+          title: "Citrus Fruits",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -484,7 +464,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Melon",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -493,7 +472,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Mango and Papaya",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -502,7 +480,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Other Fruits",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -511,16 +488,14 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Carrot",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "Green beans") {
       data = {
         data: {
-          title: "Green beans",
+          title: "Green Beans",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -529,7 +504,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Corn",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -539,9 +513,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Other vegetables (examples: tomato, lettuce, broccoli, etc.)",
+          title: "Other Vegetables",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -550,16 +523,14 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Pumpkin/Squash",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
     if (this.foodItem.name === "Potato or sweet potato") {
       data = {
         data: {
-          title: "Potato or sweet potato",
+          title: "Potato or Sweet Potato",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -568,7 +539,6 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
         data: {
           title: "Plantains",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -578,9 +548,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Other starchy vegetables (yucca, yautia, celery, breadfruit)",
+          title: "Starchy Vegetables",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -590,9 +559,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
     ) {
       data = {
         data: {
-          title: "Black/Brown/White beans, pigeon beans, chickpeas, etc.",
+          title: "Beans/Peas",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
@@ -603,9 +571,8 @@ export class QuestionBlockComponent implements OnChanges, OnInit {
       data = {
         data: {
           title:
-            "Beef or pork (includes ground beef, steak, ribs, hot dogs, sausage, ham)",
+            "Beef or Pork",
           imageUrl: this.imageRef,
-          messages: ["This image represents ."],
         },
       };
     }
