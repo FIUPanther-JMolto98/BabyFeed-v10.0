@@ -308,20 +308,18 @@ export class GrowthChartsPageComponent implements OnInit {
   // colors used to plot the diferent graphs
   colorScheme = {
     domain: [
-      "#ff0505",
-      "#ff4900",
-      "#ffa100",
-      "#ffff00",
-      "#76ff00",
-      "#00ff00",
-      "#76ff00",
-      "#ffff00",
-      "#ffa100",
-      "#ff4900",
-      "#ff0505",
-      "#1E90FF",
-      "#123b6c",
-      "#7289da",
+      "#C20000",
+      "#DB9600",
+      "#DB9600",
+      "#518675",
+      "#518675",
+      "#518675",
+      "#518675",
+      "#518675",
+      "#DB9600",
+      "#DB9600",
+      "#C20000",
+      "#000000",
       "#000080",
       "#2F2F4F",
       "#778899",
@@ -1069,7 +1067,7 @@ export class GrowthChartsPageComponent implements OnInit {
                     parseFloat(pointData.height) / FFQChildren.M_TO_CM,
                     2
                   )
-                ).toFixed(1)}) `
+                )}) `
               );
               counter++;
             } else {
@@ -1080,7 +1078,7 @@ export class GrowthChartsPageComponent implements OnInit {
                     parseFloat(pointData.height) / FFQChildren.M_TO_CM,
                     2
                   )
-                ).toFixed(1)}) \n`
+                )}) \n`
               );
               counter = 0;
             }
