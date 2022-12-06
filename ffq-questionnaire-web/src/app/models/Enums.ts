@@ -15,7 +15,7 @@ export enum ChartOption {
   BMI = "BMI",
   HeightAge = "Height-Age",
   WeightAge = "Weight-Age",
-  WeightHeight = "Weight-Height",
+  WeightHeight = "Weight-Length",
   NotAssigned = "none",
 }
 

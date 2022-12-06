@@ -114,24 +114,6 @@
             </mat-panel-description>-->
           </mat-expansion-panel-header>
           <p>{{ "Please, provide all the information asked" | translate }}.</p>
-
-          <p>
-            {{ "Length units" | translate }}:
-            <mat-button-toggle-group
-              #heightUnitOptionsGroup="matButtonToggleGroup"
-              name="heightUnitOptionsControl"
-              [(ngModel)]="heightUnitOptions"
-              [value]="heightUnitOptions"
-              (change)="onUnitsChange(chosenChartOption)"
-            >
-              <mat-button-toggle value="cm">{{
-                "Centimeters" | translate
-              }}</mat-button-toggle>
-              <mat-button-toggle value="in">{{
-                "Inches" | translate
-              }}</mat-button-toggle>
-            </mat-button-toggle-group>
-          </p>
           <p>
             {{ "Weight units" | translate }}:
             <mat-button-toggle-group
@@ -144,9 +126,30 @@
               <mat-button-toggle value="kg">{{
                 "Kilograms" | translate
               }}</mat-button-toggle>
+              <!----
               <mat-button-toggle value="lb">{{
                 "Pounds" | translate
               }}</mat-button-toggle>
+              ---->
+            </mat-button-toggle-group>
+          </p>
+          <p>
+            {{ "Length units" | translate }}:
+            <mat-button-toggle-group
+              #heightUnitOptionsGroup="matButtonToggleGroup"
+              name="heightUnitOptionsControl"
+              [(ngModel)]="heightUnitOptions"
+              [value]="heightUnitOptions"
+              (change)="onUnitsChange(chosenChartOption)"
+            >
+              <mat-button-toggle value="cm">{{
+                "Centimeters" | translate
+              }}</mat-button-toggle>
+              <!----
+              <mat-button-toggle value="in">{{
+                "Inches" | translate
+              }}</mat-button-toggle>
+              ---->
             </mat-button-toggle-group>
           </p>
 
@@ -179,34 +182,6 @@
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label
-                >{{ "Length in" | translate }} ({{
-                  heightUnitOptions
-                }})</mat-label
-              >
-              <input
-                name="heightControl"
-                #heightControl="ngModel"
-                [(ngModel)]="currentChildHeight"
-                required
-                matInput
-                type="number"
-                step="0.1"
-                placeholder="Ex. 60.5"
-                [min]="MIN_HEIGHT"
-                [max]="MAX_HEIGHT"
-              />
-              <ng-container
-                *ngIf="heightControl.invalid && heightControl.touched"
-              >
-                <mat-label *ngIf="heightControl.errors.required">
-                  {{
-                    "You must enter a length in centimeters" | translate
-                  }}.</mat-label
-                >
-              </ng-container>
-            </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label
                 >{{ "Weight in" | translate }} ({{
                   weightUnitOptions
                 }})</mat-label
@@ -229,6 +204,34 @@
                 <mat-label *ngIf="weightControl.errors.required">
                   {{
                     "You must enter a weight in kilograms" | translate
+                  }}.</mat-label
+                >
+              </ng-container>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label
+                >{{ "Length in" | translate }} ({{
+                  heightUnitOptions
+                }})</mat-label
+              >
+              <input
+                name="heightControl"
+                #heightControl="ngModel"
+                [(ngModel)]="currentChildHeight"
+                required
+                matInput
+                type="number"
+                step="0.1"
+                placeholder="Ex. 60.5"
+                [min]="MIN_HEIGHT"
+                [max]="MAX_HEIGHT"
+              />
+              <ng-container
+                *ngIf="heightControl.invalid && heightControl.touched"
+              >
+                <mat-label *ngIf="heightControl.errors.required">
+                  {{
+                    "You must enter a length in centimeters" | translate
                   }}.</mat-label
                 >
               </ng-container>
@@ -273,6 +276,7 @@
               [(ngModel)]="chosenChartOption"
               (change)="onTypeChartChange($event.value)"
             >
+            <!----  
               <mat-button-toggle value="BMI">{{
                 "BMI" | translate
               }}</mat-button-toggle>
@@ -281,8 +285,10 @@
               }}</mat-button-toggle>
               <mat-button-toggle value="Weight-Age"
                 >{{ "Weight" | translate }}
+                </mat-button-toggle>
               </mat-button-toggle>
-              <mat-button-toggle value="Weight-Height"
+              ---->
+              <mat-button-toggle value="Weight-Length"
                 >{{ "Weight-Length" | translate }}
               </mat-button-toggle>
             </mat-button-toggle-group>
